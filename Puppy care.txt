@@ -1,0 +1,24 @@
+bought_food = int(input())
+food_grams = bought_food * 1000
+all_eaten_food = 0
+
+while True:
+    eaten_food = input()
+
+    if eaten_food == "Adopted":
+        condition = False
+        break
+
+    all_eaten_food += int(eaten_food)
+
+diff = abs(all_eaten_food - food_grams)
+
+if all_eaten_food <= food_grams:
+    condition = True
+    print(f"Food is enough! Leftovers: {diff} grams.")
+else:
+    print(f"Food is not enough. You need {diff} grams more." )
+
+
+
+

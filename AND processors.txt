@@ -1,0 +1,16 @@
+import math
+
+number_of_processors_needed = int(input())
+number_of_workers = int(input())
+number_of_days = int(input())
+
+total_working_hours = number_of_workers * number_of_days * 8
+created_processors = math.floor(total_working_hours / 3)
+all_processors_price = created_processors * 110.1
+
+diff = abs(number_of_processors_needed - created_processors)
+
+if created_processors < number_of_processors_needed:
+    print(f"Losses: -> {diff * 110.1:.2f} BGN")
+elif created_processors >= number_of_processors_needed:
+    print(f"Profit: -> {diff * 110.1:.2f} BGN")

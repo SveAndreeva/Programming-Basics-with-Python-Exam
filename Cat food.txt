@@ -1,0 +1,30 @@
+number_of_cats = int(input())
+fist_group = 0
+second_group = 0
+third_group = 0
+quantity_of_food = 0
+total_food = 0
+
+for cat in range(number_of_cats):
+    quantity_of_food = float(input())
+
+    if 100 <= quantity_of_food < 200:
+        fist_group += 1
+        total_food += quantity_of_food
+
+    if 200 <= quantity_of_food < 300:
+        second_group += 1
+        total_food += quantity_of_food
+
+    if 300 <= quantity_of_food < 400:
+        third_group += 1
+        total_food += quantity_of_food
+
+all_food_quantity = total_food / 1000
+
+total_food_costs = all_food_quantity * 12.45
+
+print(f"Group 1: {fist_group} cats.")
+print(f"Group 2: {second_group} cats.")
+print(f"Group 3: {third_group} cats.")
+print(f"Price for food per day: {total_food_costs:.2f} lv.")

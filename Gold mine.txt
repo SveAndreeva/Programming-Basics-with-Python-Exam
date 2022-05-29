@@ -1,0 +1,22 @@
+number_of_locations = int(input())
+total_extraction = 0
+
+for location in range(number_of_locations):
+    expected_daily_extraction = float(input())
+    days_on_location = int(input())
+    total_extraction = 0
+    for gold in range(days_on_location):
+        extraction = float(input())
+        total_extraction += extraction
+
+    average_extraction = total_extraction / days_on_location
+
+    diff = abs(average_extraction - expected_daily_extraction)
+
+    if average_extraction >= expected_daily_extraction:
+        print(f"Good job! Average gold per day: {average_extraction:.2f}.")
+    if average_extraction < expected_daily_extraction:
+        print(f"You need {diff:.2f} gold.")
+
+
+
